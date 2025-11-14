@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirect…</title>
+  </head>
+  <body>
+    <script>
+      const affiliateLinks = [
+        "https://s.shopee.co.id/5q0LvlFL4S",
+        "https://s.shopee.co.id/9zputfFgvB",
+        "https://s.shopee.co.id/3fvrM8F2nM",
+        "https://s.shopee.co.id/9pWUhWgsUP",
+        "https://s.shopee.co.id/9AGnuc6GQu"
+      ];
+      function redirectRandomAffiliate() {
+        if (!affiliateLinks.length) {
+          console.error("Daftar affiliate kosong!");
+          return;
+        }
+        const randomIndex = Math.floor(Math.random() * affiliateLinks.length);
+        const targetUrl = affiliateLinks[randomIndex];
+        window.location.replace(targetUrl);
+      }
+      window.addEventListener("DOMContentLoaded", redirectRandomAffiliate);
+    </script>
+  </body>
+</html>
